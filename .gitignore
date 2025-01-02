@@ -4,3 +4,6 @@
 .LSOverride
 
 data
+bin
+deploy
+certs
