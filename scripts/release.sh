@@ -4,6 +4,7 @@
 set -e
 
 # TODO: make a backup of the existing images for a rollback
+docker compose down
 
 docker load -i images.tar
 tar -xvf configs.tar # unzip the configs files

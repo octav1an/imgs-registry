@@ -20,7 +20,7 @@ mkdir -p bin
 docker compose -f docker-compose.yml -f docker-compose.prod.yml config | sed "s|$(pwd)|.|g" > bin/docker-compose.yml
 
 # Archive all the config files necessary for deployment
-tar -cvf bin/configs.tar --no-xattrs certs -C bin docker-compose.yml
+tar -cf bin/configs.tar --no-xattrs certs -C bin docker-compose.yml
 
 # Clean up
 docker rmi $NGINX_IMAGE
