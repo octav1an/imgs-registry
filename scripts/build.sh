@@ -17,6 +17,7 @@ docker build --no-cache -t=$REGISTRY_IMAGE --platform=$PLATFORM registry
 docker image save --output bin/images.tar $NGINX_IMAGE $REGISTRY_IMAGE
 
 mkdir -p bin
+# Replace all local absolute paths with relative
 docker compose -f docker-compose.yml -f docker-compose.prod.yml config | sed "s|$(pwd)|.|g" > bin/docker-compose.yml
 
 # Archive all the config files necessary for deployment
