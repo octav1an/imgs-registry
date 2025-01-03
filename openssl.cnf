@@ -9,9 +9,9 @@ distinguished_name  = dn
 CN = ${ENV::PRIVATE_REGISTRY}
 
 [req_ext]
-subjectAltName=@alt_names
-keyUsage=digitalSignature
-extendedKeyUsage=serverAuth
+subjectAltName=   @alt_names
+keyUsage=         digitalSignature
+extendedKeyUsage= serverAuth
 
 [ alt_names ]
 DNS.1   = ${ENV::PRIVATE_REGISTRY}

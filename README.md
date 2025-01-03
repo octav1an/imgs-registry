@@ -27,7 +27,7 @@ dotenv -f .env run -- openssl req -x509 \
 -keyout certs/ssl.key \
 -out certs/ssl.crt \
 -nodes \
--days 365 \
+-days 1825 \
 -newkey rsa:2048 \
 -extensions req_ext \
 -config openssl.cnf
