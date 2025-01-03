@@ -14,7 +14,7 @@ if [ -z $ACTION ]; then
       tar -zcvf /backup/backup-$(date +%Y-%m-%d_%H-%M-%S).tar.gz /backup-volume
 fi
 
-if [ "$ACTION" == "restore" ]; then
+if [ "$ACTION" = "restore" ]; then
   echo "restoring registry..."
   docker run --rm \
       -v "$VOLUME_NAME":/backup-volume \
