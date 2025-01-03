@@ -1,0 +1,9 @@
+services:
+  registry:
+    image: ${REGISTRY_IMAGE}
+    build: !reset null
+    ports: !override [] # https://docs.docker.com/reference/compose-file/merge/#replace-value
+
+  nginx:
+    image: ${NGINX_IMAGE}
+    build: !reset null
