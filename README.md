@@ -40,3 +40,11 @@ openssl x509 -in certs/ssl.crt -text -noout
 ```
 
 Make sure all clients trust this certificate
+
+## Auth
+
+I use basic auth with nginx, with `.htpasswd` file so passwords are hashed using `apr1` which is good enough for private service for now.
+
+To generate new passwords use: `openssl passwd -apr1`
+
+To login use: `docker login <registry dns>`
