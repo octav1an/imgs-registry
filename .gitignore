@@ -8,4 +8,4 @@ bin
 deploy
 certs
 .htpasswd
-.env
+.*env*

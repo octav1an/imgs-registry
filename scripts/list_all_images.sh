@@ -1,6 +1,6 @@
 #!/bin/sh
 
-source .env
+source .ci.env
 
 if [ -z "$1" ]; then
   echo "error: provide user:password combination"

@@ -2,7 +2,7 @@
 # Deploys the compose file (and potentially env files) to the server
 set -e
 
-source .env
+source .ci.env
 
 DESTINATION=$USER@$PRIVATE_REGISTRY:services/$PROJECT_NAME
 

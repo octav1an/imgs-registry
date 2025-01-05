@@ -23,7 +23,7 @@ docker compose up -d
 I use self singed certificate. To generate new certificate:
 
 ```sh
-dotenv -f .env run -- openssl req -x509 \
+dotenv -f .ci.env run -- openssl req -x509 \
 -keyout certs/ssl.key \
 -out certs/ssl.crt \
 -nodes \

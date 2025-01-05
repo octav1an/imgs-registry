@@ -38,9 +38,8 @@ do
   cp -r $artifact $BACKUP_DIR
 done
 
-docker compose down
-
 docker load -i images.tar
 tar -xvf configs.tar # unzip the configs files
 
+docker compose down
 docker compose up -d
